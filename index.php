@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"]==POST)
 header("Content-type: text/html; charset=utf-8");
       include_once 'api.class.php';
       $API = new api();
-      $API->Select('UserInfo','order by id desc limit 0,2');
+      $API->Select('UserInfo','order by id desc');
       $result = $API->mysql_db->result;
       $error = mysql_error();
       if(mysql_num_rows($result)>0){
@@ -334,10 +334,10 @@ header("Content-type: text/html; charset=utf-8");
 				 <li>
 				 <div class="person1"></div>
 				 <div class="about-add-grid">
-				 <h4><?php
+				 <p><?php
                     $firstMessage = $lastestMessage[0];
                     echo $firstMessage['Message'];
-?></h4>
+?></p>
 				 <a href="#">留言人:<b><?php echo $firstMessage['UserName']; ?></b></a>		 
 				 </div>
 				 <div class="clearfix"></div>
@@ -350,6 +350,17 @@ header("Content-type: text/html; charset=utf-8");
                  echo $secondMessage['Message'];
                                    ?></p>
 				 <a href="#">留言人:<b><?php echo $secondMessage['UserName']; ?></b></a>		 
+				 </div>
+				 <div class="clearfix"></div>
+			  </li>	
+                      <li>
+				 <div class="person2"></div>
+				 <div class="about-add-grid">
+				 <p><?php         
+                 $thridMessage = $lastestMessage[2];
+                 echo $thridMessage['Message'];
+                                   ?></p>
+				 <a href="#">留言人:<b><?php echo $thridMessage['UserName']; ?></b></a>		 
 				 </div>
 				 <div class="clearfix"></div>
 			  </li>	

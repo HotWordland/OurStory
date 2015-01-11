@@ -565,14 +565,14 @@ a.date h5:hover{
 .about-add-grid p{
 	width:94%;
 	color:A5A5A5;
-	font-size:14px;
+	font-size:25px;
 	text-align:left;
-	font-style:italic;
+	font-style:normal;
 	margin:11px 0;
 }
 .about-add-grid a{
 	float:right;
-	font-size: 0.7em;
+	font-size: 1.7em;
 	color:#000;
 }
 .about-add-grid a:hover{
@@ -580,6 +580,7 @@ a.date h5:hover{
 	color:#000;
 }
 .about-add-grid a b{
+
 	color:red;
 }
 #flexiselDemo3 {
